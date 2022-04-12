@@ -1,12 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MealService } from '../meal-service/meal.service';
 import { Test } from '../test';
-// import { FormComponent } from '../form/form.component';
-// import { Injectable } from '@angular/core';
 
-// @Injectable({
-//   providedIn: 'root'
-// })
 @Component({
   selector: 'app-meal',
   templateUrl: './meal.component.html',

@@ -19,4 +19,12 @@ export class MealService {
   addMeal(meal:Test){
     this.meals.push(meal)
   }
+
+  // calories: number;
+  // sortMeal(){
+  //  for (let calorie of calorie >= 500){
+  //    return this.meals.calories;
+  //  }
+  // }
+
 }

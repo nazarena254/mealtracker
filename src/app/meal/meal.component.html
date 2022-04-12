@@ -1,22 +1,43 @@
 
-<div class="container ">
-    <h3 class="text-center mb-4">Meal Calories Overview</h3>
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead class="thead bg-light text-white">
-                <tr class="tr">
-                    <th>Name</th>
-                    <th>Calories</th>
-                    <th>Detail</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor='let meal of meals'>
-                    <td> {{meal.name}} </td>
-                    <td> {{meal.calories}} </td>
-                    <td> {{meal.detail}} </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<div class="container-fluid meal-body ">
+
+    <nav class="navbar  navbar-expand-lg navbar-light bg-light my-nav" >
+        <a class="navbar-brand mb-0 h1 logo" href="#"><span id="logo2">MEAL</span><span id="logo1">Tracker</span></a>
+       
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav ms-auto ">
+                <li class="nav-item active">
+                  <a class="nav-link link1" href="#top">Meals </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link2" href="#bottom">Add meal</a>
+                </li>                       
+            </ul>
+        </div>
+    </nav>
+
+    <h2 class="text-center  mt-4 heading1">Meal Calories Overview</h2>
+    <a name="top"></a>
+    <div class="row">
+        <a name="top"></a>
+        <div class="col-md-5" >
+            <h4>Meal descriptions</h4><br> <a name="top"></a>
+            <div  *ngFor='let meal of meals'>
+                <p>Name:  {{meal.name}} Calories:  {{meal.calories}} </p>
+                <p>Calories:  {{meal.calories}} </p>
+                <p>Description: {{meal.detail}} </p><br>
+            </div>
+            <!-- <div *ngIf='let meal.calorie of meal.calories > 500'  >
+                  <p>calories > 500: {{meal.name}}</p>
+            </div> -->
+
+       </div>
+
+        <div class="col-md-7">
+            <h4>Add meal Description Form</h4> <a name="bottom"></a> 
+            <app-form></app-form>
+        </div>
+
+   </div>  
+        
 </div>
