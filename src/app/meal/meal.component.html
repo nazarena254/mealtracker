@@ -1,55 +1,42 @@
 
 <div class="container-fluid meal-body ">
 
-    <!-- <nav class="navbar  navbar-expand-lg navbar-light bg-light my-nav" >
-        <a class="navbar-brand mb-0 h1 logo" href="#"><span id="logo2">MEAL</span><span id="logo1">Tracker</span></a>
-       
-        <div class="collapse navbar-collapse " id="navbarNav">
-            <ul class="navbar-nav ms-auto ">
-                <li class="nav-item active">
-                  <a class="nav-link link1" href="#top">Meals </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link2" href="#bottom">Add meal</a>
-                </li>                       
-            </ul>
-        </div>
-    </nav> -->
-
     <h2 class="text-center  mt-4 heading1">Meal Calories Overview</h2>
     <a name="top"></a>
     <div class="row">
         <a name="top"></a>
-        <div class="col-md-5" >
-            <h4>Meal descriptions</h4><br> <a name="top"></a>
+        <div class="col-md-7">
+            <h4 style="font-weight: bold;"> Add meal Description Form</h4><br><br> <a name="bottom"></a> 
+            <app-form></app-form>
+       </div>
+
+        <div class="col-md-3" >
+            <h4 style="font-weight: bold;"> Meal descriptions</h4> <a name="top"></a>
+            <h5>All meals</h5><br>
             <div  *ngFor='let meal of meals'>
                 <p>Name:  {{meal.name}}  </p>
                 <p>Calories:  {{meal.calories}} </p>
                 <p>Description: {{meal.detail}} </p>
                 <button class="btn btn-secondary edit-btn">Edit</button>
-                <button class="btn btn-secondary">Delete</button>
-                <br><br>
+                <button class="btn btn-secondary" (click)="deleteMeal(meal)" >Delete</button>
+                <br><br> 
             </div>
        </div>
 
-        <div class="col-md-7">
-            <h4>Add meal Description Form</h4> <a name="bottom"></a> 
-            <app-form></app-form>
-        </div>
-   </div> 
-   
-   <div class="row">
-       <h5 style="font-style: italic; font-weight: bold;">Calorie Category</h5>
-       <div>
-            <button class="btn btn-secondary edit-btn">High calories</button>
-                    <!-- <div *ngIf='let meal.calorie of meal.calories > 500'  >
-                         <p>calories > 500: {{meal.name}}</p>
-                    </div> -->
-            <button class="btn btn-secondary">Low calories</button>
-                     <!-- <div *ngIf='let meal.calorie of meal.calories < 500'  >
-                         <p>calories < 500: {{meal.name}}</p>
-                    </div> -->
-       </div>
-   </div>
+       <div class="col-md-2">
+            <h4 style="font-weight: bold;">Calorie Category</h4><br>
+            <div>
+                <p>To display meals with calorie greater than 500</p>
+                <button class="btn btn-secondary edit-btn" (click)='highCalorie()'>
+                    High calorie
+                </button><br><br>
+                <p>To display meals with calorie lower than 500</p>
+                <button class="btn btn-secondary" (click)='lowCalorie()'>
+                    Low calories
+                </button>
+            </div>
+       </div>      
+
+    </div>  
         
 </div>

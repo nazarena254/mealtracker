@@ -2,16 +2,19 @@
 <form class="w-50 bg-secondary p-3 "  >
     <div class="mb-4">
       <label for="mealName" class="form-label">Food Type(name)</label>
-      <input type="text" name="name" class="form-control" id="mealName"  [(ngModel)]='meal.name'>
+      <input type="text" name="name" class="form-control" id="mealName"  
+      required [(ngModel)]='meal.name'>
       
     </div>
     <div class="mb-4">
       <label for="calories" class="form-label">Calories consumed</label>
-      <input type="number" name="calories" class="form-control" id="calories"  [(ngModel)]='meal.calories'>
+      <input type="number" name="calories" class="form-control" id="calories"  
+      required [(ngModel)]='meal.calories'>
     </div>
     <div class="mb-4 ">
         <label class="form-label" for="details">Description</label>
-      <textarea type="text" name="detail" [(ngModel)]='meal.detail' class="form-control" rows="5" id="details"></textarea>
+      <textarea type="text" name="detail" [(ngModel)]='meal.detail' 
+      required class="form-control" rows="5" id="details"></textarea>
     </div>
     <button type="submit" (click)='addMeal()' class="btn btn-secondary">Add Meal</button>
   </form>
