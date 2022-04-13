@@ -1,12 +1,11 @@
 .meal-body{
    background-color: rgb(171, 175, 175);
+   margin-top: 0px;
 }
 .heading1{
     margin-bottom: 50px;
 }
-.my-nav{
-    padding: 5px 27px;
+.edit-btn{
+    margin-right: 40px;
 }
-li{
-    font-weight: bold;
-}
+

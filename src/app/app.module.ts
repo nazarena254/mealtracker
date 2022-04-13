@@ -8,12 +8,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 import { MealComponent } from './meal/meal.component';
+import { AboutComponent } from './about/about.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
-    MealComponent
+    MealComponent,
+    AboutComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
